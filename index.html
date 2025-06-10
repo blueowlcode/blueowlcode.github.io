@@ -1,1 +1,214 @@
-<h1>Blue Owl Code</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blue Owl Code - Defensive Cybersecurity Tools and Research" />
+  <title>Blue Owl Code</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      position: relative;
+      overflow-x: hidden;
+    }
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="bg-gray-900 py-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-white">Blue Owl Code</h1>
+    <p class="text-gray-400 text-lg mt-2">Defensive Security Engineering for the Modern Web and Desktop</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">About Us</h2>
+      <p>
+        Blue Owl Code is a cybersecurity development group focused on building defensive security tools for web, desktop, and digital investigation. We create both open-source and commercial solutions to support defenders, SOC analysts, and OSINT researchers.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Featured Projects</h2>
+      <ul class="space-y-4">
+        <li>
+          <h3 class="text-blue-400 font-semibold">web-defender.js</h3>
+          <p>Client-side plugin to detect XSS, clickjacking, and injections.</p>
+        </li>
+        <li>
+          <h3 class="text-blue-400 font-semibold">owl-av</h3>
+          <p>Lightweight antivirus engine for behavior and signature-based detection.</p>
+        </li>
+        <li>
+          <h3 class="text-blue-400 font-semibold">tracehunter</h3>
+          <p>SOCMINT tool for tracking digital footprints and exposed metadata.</p>
+        </li>
+        <li>
+          <h3 class="text-blue-400 font-semibold">blueowl-agent</h3>
+          <p>Log monitoring and anomaly detection agent for desktop systems.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Pricing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-gray-700 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2">Free</h3>
+          <p class="mb-2">Open-source access to selected tools</p>
+          <p class="text-blue-400 font-bold text-xl">$0</p>
+        </div>
+        <div class="border border-blue-500 rounded-lg p-6 bg-gray-800">
+          <h3 class="text-xl font-bold mb-2">Pro</h3>
+          <p class="mb-2">Full access to all tools + priority updates</p>
+          <p class="text-blue-400 font-bold text-xl">$9.99/mo</p>
+        </div>
+        <div class="border border-gray-700 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+          <p class="mb-2">Team license & custom deployment options</p>
+          <p class="text-blue-400 font-bold text-xl">Contact Us</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">FAQ</h2>
+      <div class="space-y-4">
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg">Are your tools open-source?</summary>
+          <p class="mt-2">Yes, most of our tools are open-source. Premium features may require a subscription.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg">Can I contribute to Blue Owl Code?</summary>
+          <p class="mt-2">Absolutely. We welcome contributions from the community. Visit our GitHub to get started.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg">Where is the source code hosted?</summary>
+          <p class="mt-2">All our open-source projects are hosted on <a class="text-blue-400 underline" href="https://github.com/blueowlcode" target="_blank">GitHub</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+      <form class="space-y-4 max-w-xl" action="mailto:contact@blueowlcode.com" method="POST" enctype="text/plain">
+        <div>
+          <label class="block mb-1">Name</label>
+          <input type="text" name="name" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded" />
+        </div>
+        <div>
+          <label class="block mb-1">Email</label>
+          <input type="email" name="email" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded" />
+        </div>
+        <div>
+          <label class="block mb-1">Message</label>
+          <textarea name="message" rows="5" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded"></textarea>
+        </div>
+        <button type="submit" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">Send</button>
+      </form>
+    </section>
+
+    <section class="text-center mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Follow Us</h2>
+      <div class="flex justify-center gap-6 text-2xl">
+        <a href="https://x.com/blueowlcode" class="text-blue-400 hover:text-white" aria-label="X"><i class="ph ph-x-logo"></i></a>
+        <a href="https://youtube.com/@blueowlcode" class="text-blue-400 hover:text-white" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://linkedin.com/company/blueowlcode" class="text-blue-400 hover:text-white" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/blueowlcode" class="text-blue-400 hover:text-white" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-center py-6 text-sm text-gray-500">
+    <p>&copy; 2025 Blue Owl Code. We defend the digital.</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particlesArray = [];
+    const numberOfParticles = 100;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2;
+        this.speedX = (Math.random() - 0.5) * 1;
+        this.speedY = (Math.random() - 0.5) * 1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+      }
+      draw() {
+        ctx.fillStyle = 'rgba(255,255,255,0.2)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function drawLines() {
+      for (let i = 0; i < particlesArray.length; i++) {
+        for (let j = i + 1; j < particlesArray.length; j++) {
+          const dx = particlesArray[i].x - particlesArray[j].x;
+          const dy = particlesArray[i].y - particlesArray[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+            ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function init() {
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      drawLines();
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
