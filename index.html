@@ -8,11 +8,12 @@
   <title>Blue Owl Code</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #e2e8f0;
       position: relative;
       overflow-x: hidden;
@@ -25,117 +26,286 @@
       height: 100vh;
       z-index: -1;
     }
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+    .feature-icon {
+      background: rgba(59, 130, 246, 0.1);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
 
-  <header class="bg-gray-900 py-10 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-white">Blue Owl Code</h1>
-    <p class="text-gray-400 text-lg mt-2">Defensive Security Engineering for the Modern Web and Desktop</p>
+  <header class="bg-gradient-to-r from-gray-900 to-gray-800 py-16 text-center animate__animated animate__fadeIn">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Blue Owl Code</h1>
+      <p class="text-xl text-gray-300 mb-8">Defensive Security Engineering for the Modern Web and Desktop</p>
+      <div class="flex justify-center gap-4">
+        <a href="#pricing" class="btn-primary text-white px-6 py-3 rounded-lg font-medium">Get Started</a>
+        <a href="https://github.com/blueowlcode" target="_blank" class="px-6 py-3 border border-gray-600 text-white rounded-lg font-medium hover:bg-gray-800 transition">View on GitHub</a>
+      </div>
+    </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-10">
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">About Us</h2>
-      <p>
-        Blue Owl Code is a cybersecurity development group focused on building defensive security tools for web, desktop, and digital investigation. We create both open-source and commercial solutions to support defenders, SOC analysts, and OSINT researchers.
-      </p>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Featured Projects</h2>
-      <ul class="space-y-4">
-        <li>
-          <h3 class="text-blue-400 font-semibold">web-defender.js</h3>
-          <p>Client-side plugin to detect XSS, clickjacking, and injections.</p>
-        </li>
-        <li>
-          <h3 class="text-blue-400 font-semibold">owl-av</h3>
-          <p>Lightweight antivirus engine for behavior and signature-based detection.</p>
-        </li>
-        <li>
-          <h3 class="text-blue-400 font-semibold">tracehunter</h3>
-          <p>SOCMINT tool for tracking digital footprints and exposed metadata.</p>
-        </li>
-        <li>
-          <h3 class="text-blue-400 font-semibold">blueowl-agent</h3>
-          <p>Log monitoring and anomaly detection agent for desktop systems.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Pricing</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="border border-gray-700 rounded-lg p-6">
-          <h3 class="text-xl font-bold mb-2">Free</h3>
-          <p class="mb-2">Open-source access to selected tools</p>
-          <p class="text-blue-400 font-bold text-xl">$0</p>
+    <section class="mb-20">
+      <div class="text-center mb-12">
+        <span class="text-blue-400 font-semibold">WHO WE ARE</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Protecting Digital Frontiers</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-lg text-gray-300 mb-6">
+            Blue Owl Code is a cybersecurity development group focused on building defensive security tools for web, desktop, and digital investigation. We create both open-source and commercial solutions to support defenders, SOC analysts, and OSINT researchers.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-800 p-4 rounded-lg">
+              <div class="feature-icon">
+                <i class="ph ph-shield-check text-blue-400 text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-white">Advanced Protection</h3>
+              <p class="text-sm text-gray-400">Real-time threat detection</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg">
+              <div class="feature-icon">
+                <i class="ph ph-lock-key text-blue-400 text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-white">Privacy Focused</h3>
+              <p class="text-sm text-gray-400">Zero data collection</p>
+            </div>
+          </div>
         </div>
-        <div class="border border-blue-500 rounded-lg p-6 bg-gray-800">
-          <h3 class="text-xl font-bold mb-2">Pro</h3>
-          <p class="mb-2">Full access to all tools + priority updates</p>
-          <p class="text-blue-400 font-bold text-xl">$9.99/mo</p>
-        </div>
-        <div class="border border-gray-700 rounded-lg p-6">
-          <h3 class="text-xl font-bold mb-2">Enterprise</h3>
-          <p class="mb-2">Team license & custom deployment options</p>
-          <p class="text-blue-400 font-bold text-xl">Contact Us</p>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cybersecurity" class="w-full h-auto object-cover">
         </div>
       </div>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">FAQ</h2>
-      <div class="space-y-4">
-        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
-          <summary class="font-semibold text-lg">Are your tools open-source?</summary>
-          <p class="mt-2">Yes, most of our tools are open-source. Premium features may require a subscription.</p>
+    <section class="mb-20" id="projects">
+      <div class="text-center mb-12">
+        <span class="text-blue-400 font-semibold">OUR TOOLS</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Featured Projects</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 card-hover">
+          <div class="text-blue-400 text-3xl mb-4">
+            <i class="ph ph-shield"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">web-defender.js</h3>
+          <p class="text-gray-400">Client-side plugin to detect XSS, clickjacking, and injections.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 card-hover">
+          <div class="text-blue-400 text-3xl mb-4">
+            <i class="ph ph-virus"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">owl-av</h3>
+          <p class="text-gray-400">Lightweight antivirus engine for behavior and signature-based detection.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 card-hover">
+          <div class="text-blue-400 text-3xl mb-4">
+            <i class="ph ph-magnifying-glass"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">tracehunter</h3>
+          <p class="text-gray-400">SOCMINT tool for tracking digital footprints and exposed metadata.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 card-hover">
+          <div class="text-blue-400 text-3xl mb-4">
+            <i class="ph ph-terminal-window"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">blueowl-agent</h3>
+          <p class="text-gray-400">Log monitoring and anomaly detection agent for desktop systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-20" id="pricing">
+      <div class="text-center mb-12">
+        <span class="text-blue-400 font-semibold">PRICING</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Simple, Transparent Pricing</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">Choose the plan that fits your needs. Upgrade, downgrade, or cancel anytime.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-gray-700 rounded-xl p-8 bg-gray-800/50 hover:border-blue-500 transition card-hover">
+          <h3 class="text-xl font-bold mb-2 text-white">Free</h3>
+          <p class="text-gray-400 mb-6">Open-source access to selected tools</p>
+          <p class="text-4xl font-bold text-white mb-6">$0<span class="text-gray-400 text-sm font-normal">/forever</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Basic security tools</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Community support</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Documentation access</li>
+          </ul>
+          <button class="w-full py-2 border border-gray-600 text-white rounded-lg hover:bg-gray-700 transition">Current Plan</button>
+        </div>
+        <div class="border-2 border-blue-500 rounded-xl p-8 bg-gray-800 transform scale-105 card-hover relative">
+          <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+          <h3 class="text-xl font-bold mb-2 text-white">Pro</h3>
+          <p class="text-gray-400 mb-6">Full access to all tools + priority updates</p>
+          <p class="text-4xl font-bold text-white mb-6">$9.99<span class="text-gray-400 text-sm font-normal">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> All security tools</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Priority support</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Early access to new features</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Premium documentation</li>
+          </ul>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="w-full">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
+            <button type="submit" class="w-full btn-primary text-white py-3 rounded-lg font-medium">Subscribe with PayPal</button>
+          </form>
+        </div>
+        <div class="border border-gray-700 rounded-xl p-8 bg-gray-800/50 hover:border-purple-500 transition card-hover">
+          <h3 class="text-xl font-bold mb-2 text-white">Enterprise</h3>
+          <p class="text-gray-400 mb-6">Team license & custom deployment options</p>
+          <p class="text-4xl font-bold text-white mb-6">Custom</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Everything in Pro</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Team licenses</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Dedicated support</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> Custom integrations</li>
+            <li class="flex items-center text-gray-300"><i class="ph ph-check-circle text-blue-400 mr-2"></i> SLA guarantees</li>
+          </ul>
+          <a href="#contact" class="w-full inline-block text-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition">Contact Sales</a>
+        </div>
+      </div>
+      <div class="text-center mt-8 text-gray-400">
+        <p>Need help choosing? <a href="#contact" class="text-blue-400 hover:underline">Contact our team</a></p>
+      </div>
+    </section>
+
+    <section class="mb-20">
+      <div class="text-center mb-12">
+        <span class="text-blue-400 font-semibold">QUESTIONS</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Frequently Asked</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <details class="group bg-gray-800 p-6 rounded-xl cursor-pointer" open>
+          <summary class="flex justify-between items-center font-semibold text-lg text-white list-none">
+            <span>Are your tools open-source?</span>
+            <i class="ph ph-caret-down group-open:rotate-180 transform transition"></i>
+          </summary>
+          <p class="mt-4 text-gray-300">Yes, most of our tools are open-source under MIT License. Premium features may require a subscription for commercial use. You can view, modify, and distribute our open-source code as per the license terms.</p>
         </details>
-        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
-          <summary class="font-semibold text-lg">Can I contribute to Blue Owl Code?</summary>
-          <p class="mt-2">Absolutely. We welcome contributions from the community. Visit our GitHub to get started.</p>
+        <details class="group bg-gray-800 p-6 rounded-xl cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-white list-none">
+            <span>Can I contribute to Blue Owl Code?</span>
+            <i class="ph ph-caret-down group-open:rotate-180 transform transition"></i>
+          </summary>
+          <p class="mt-4 text-gray-300">Absolutely! We welcome contributions from the security community. Visit our GitHub to check open issues, feature requests, and contribution guidelines. Significant contributors may receive free Pro subscriptions.</p>
         </details>
-        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
-          <summary class="font-semibold text-lg">Where is the source code hosted?</summary>
-          <p class="mt-2">All our open-source projects are hosted on <a class="text-blue-400 underline" href="https://github.com/blueowlcode" target="_blank">GitHub</a>.</p>
+        <details class="group bg-gray-800 p-6 rounded-xl cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-white list-none">
+            <span>Where is the source code hosted?</span>
+            <i class="ph ph-caret-down group-open:rotate-180 transform transition"></i>
+          </summary>
+          <p class="mt-4 text-gray-300">All our open-source projects are hosted on <a class="text-blue-400 underline" href="https://github.com/blueowlcode" target="_blank">GitHub</a>. Enterprise customers may request private repository access for proprietary components.</p>
+        </details>
+        <details class="group bg-gray-800 p-6 rounded-xl cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-white list-none">
+            <span>How do I cancel my subscription?</span>
+            <i class="ph ph-caret-down group-open:rotate-180 transform transition"></i>
+          </summary>
+          <p class="mt-4 text-gray-300">You can cancel your Pro subscription anytime through your PayPal account. Cancellations take effect at the end of your billing cycle with no prorated refunds. Enterprise plans require 30-day notice.</p>
         </details>
       </div>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
-      <form class="space-y-4 max-w-xl" action="mailto:contact@blueowlcode.com" method="POST" enctype="text/plain">
-        <div>
-          <label class="block mb-1">Name</label>
-          <input type="text" name="name" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded" />
-        </div>
-        <div>
-          <label class="block mb-1">Email</label>
-          <input type="email" name="email" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded" />
-        </div>
-        <div>
-          <label class="block mb-1">Message</label>
-          <textarea name="message" rows="5" required class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded"></textarea>
-        </div>
-        <button type="submit" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">Send</button>
-      </form>
+    <section class="mb-20" id="contact">
+      <div class="text-center mb-12">
+        <span class="text-blue-400 font-semibold">CONTACT</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Get In Touch</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">Have questions about our products or services? Our team is here to help.</p>
+      </div>
+      <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl p-8 border border-gray-700">
+        <form class="space-y-6" action="mailto:contact@blueowlcode.com" method="POST" enctype="text/plain">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block mb-2 text-gray-300">Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" />
+            </div>
+            <div>
+              <label class="block mb-2 text-gray-300">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" />
+            </div>
+          </div>
+          <div>
+            <label class="block mb-2 text-gray-300">Subject</label>
+            <select name="subject" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Sales Question">Sales Question</option>
+              <option value="Technical Support">Technical Support</option>
+              <option value="Partnership">Partnership</option>
+            </select>
+          </div>
+          <div>
+            <label class="block mb-2 text-gray-300">Message</label>
+            <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+          </div>
+          <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg font-medium w-full md:w-auto">Send Message</button>
+        </form>
+      </div>
     </section>
 
-    <section class="text-center mt-12">
-      <h2 class="text-2xl font-semibold mb-4">Follow Us</h2>
-      <div class="flex justify-center gap-6 text-2xl">
-        <a href="https://x.com/blueowlcode" class="text-blue-400 hover:text-white" aria-label="X"><i class="ph ph-x-logo"></i></a>
-        <a href="https://youtube.com/@blueowlcode" class="text-blue-400 hover:text-white" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-        <a href="https://linkedin.com/company/blueowlcode" class="text-blue-400 hover:text-white" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-        <a href="https://github.com/blueowlcode" class="text-blue-400 hover:text-white" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+    <section class="text-center mt-12 mb-20">
+      <h2 class="text-3xl font-bold text-white mb-8">Join Our Security Community</h2>
+      <div class="flex justify-center gap-6 text-3xl mb-8">
+        <a href="https://x.com/blueowlcode" class="text-gray-400 hover:text-white transition" aria-label="X"><i class="ph ph-x-logo"></i></a>
+        <a href="https://youtube.com/@blueowlcode" class="text-gray-400 hover:text-white transition" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://linkedin.com/company/blueowlcode" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/blueowlcode" class="text-gray-400 hover:text-white transition" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+      </div>
+      <div class="max-w-2xl mx-auto bg-gray-800 rounded-xl p-6 border border-gray-700">
+        <h3 class="text-xl font-semibold text-white mb-4">Subscribe to Our Newsletter</h3>
+        <p class="text-gray-400 mb-4">Get the latest security insights and product updates.</p>
+        <form class="flex flex-col md:flex-row gap-3">
+          <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg font-medium">Subscribe</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-center py-6 text-sm text-gray-500">
-    <p>&copy; 2025 Blue Owl Code. We defend the digital.</p>
+  <footer class="bg-gray-900 text-center py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-2xl font-bold text-white">Blue Owl Code</h2>
+          <p class="text-gray-400">Defensive Security Engineering</p>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Security</a>
+          <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+        </div>
+      </div>
+      <p class="text-sm text-gray-500">&copy; 2025 Blue Owl Code. All rights reserved. We defend the digital.</p>
+    </div>
   </footer>
 
   <script>
@@ -145,15 +315,16 @@
     canvas.height = window.innerHeight;
 
     const particlesArray = [];
-    const numberOfParticles = 100;
+    const numberOfParticles = 150;
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2;
-        this.speedX = (Math.random() - 0.5) * 1;
-        this.speedY = (Math.random() - 0.5) * 1;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.speedY = (Math.random() - 0.5) * 0.8;
+        this.alpha = Math.random() * 0.2 + 0.1;
       }
       update() {
         this.x += this.speedX;
@@ -162,10 +333,13 @@
         if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
       }
       draw() {
-        ctx.fillStyle = 'rgba(255,255,255,0.2)';
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle = 'rgba(147, 197, 253, 1)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+        ctx.restore();
       }
     }
 
@@ -175,13 +349,16 @@
           const dx = particlesArray[i].x - particlesArray[j].x;
           const dy = particlesArray[i].y - particlesArray[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+          if (distance < 120) {
+            ctx.save();
+            ctx.globalAlpha = 0.15 - (distance/120)*0.1;
+            ctx.strokeStyle = 'rgba(147, 197, 253, 1)';
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
             ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
             ctx.stroke();
+            ctx.restore();
           }
         }
       }
@@ -209,6 +386,16 @@
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 </body>
